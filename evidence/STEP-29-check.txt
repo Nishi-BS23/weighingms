@@ -1,0 +1,88 @@
+$ npm run check
+
+> weighingms@0.1.0 check
+> npm run check:py && npm run check:web
+
+
+> weighingms@0.1.0 check:py
+> .venv/bin/ruff format --check src tests scripts && .venv/bin/ruff check src tests scripts && .venv/bin/mypy && .venv/bin/pytest --cov --cov-report=term-missing
+
+116 files already formatted
+All checks passed!
+Success: no issues found in 84 source files
+........................................................................ [ 33%]
+........................................................................ [ 67%]
+......................................................................   [100%]
+=============================== warnings summary ===============================
+.venv/lib/python3.13/site-packages/fastapi/testclient.py:1
+  /home/bs00956/Desktop/weighingms/.venv/lib/python3.13/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.13.5-final-0 ________________
+
+Name                                                                                      Stmts   Miss Branch BrPart  Cover   Missing
+-------------------------------------------------------------------------------------------------------------------------------------
+src/dummy_systems/app.py                                                                     48      1      0      0    98%   77
+src/dummy_systems/common/clock.py                                                            12      3      0      0    75%   13, 17-18
+src/dummy_systems/orgatex/store.py                                                           60      4      4      0    94%   75-79
+src/dummy_systems/scale/bank.py                                                             122      3     22      2    97%   51, 159-160
+src/dummy_systems/scale/simulation.py                                                        27      1      6      1    94%   39
+src/weighingms/api/errors.py                                                                 29      2      0      0    93%   42-43
+src/weighingms/application/operators.py                                                      27      0      2      1    97%   35->44
+src/weighingms/application/sessions.py                                                      219     15     28      4    92%   198-199, 216-217, 348-349, 353->exit, 362->369, 365-366, 371-372, 383, 393-394, 401-402
+src/weighingms/application/training.py                                                       24      1      2      1    92%   33
+src/weighingms/clock.py                                                                       8      1      0      0    88%   12
+src/weighingms/config.py                                                                     50      2      0      0    96%   116-117
+src/weighingms/domain/operators.py                                                           41      2     12      2    92%   30, 58
+src/weighingms/domain/quantity.py                                                            36      1      2      0    97%   46
+src/weighingms/domain/weighing/evaluation.py                                                 77      1     22      1    98%   139
+src/weighingms/domain/weighing/session.py                                                   180      2     30      2    98%   84, 294
+src/weighingms/infrastructure/devices/http.py                                                22      6      2      0    75%   25-27, 39-41
+src/weighingms/infrastructure/persistence/migrations/versions/0001_core_session.py           18      5      0      0    72%   74-78
+src/weighingms/infrastructure/persistence/migrations/versions/0002_records_overrides.py      12      2      0      0    83%   63-64
+src/weighingms/infrastructure/persistence/migrations/versions/0003_print_log.py              10      1      0      0    90%   29
+src/weighingms/infrastructure/persistence/repositories.py                                   149      2     12      0    99%   88-89
+src/weighingms/infrastructure/persistence/types.py                                           16      1      4      1    90%   19
+-------------------------------------------------------------------------------------------------------------------------------------
+TOTAL                                                                                      3096     56    218     15    98%
+
+61 files skipped due to complete coverage.
+Required test coverage of 80.0% reached. Total coverage: 97.86%
+214 passed, 1 warning in 23.74s
+
+> weighingms@0.1.0 check:web
+> npm --prefix frontend run check
+
+
+> weighingms-frontend@0.1.0 check
+> npm run format:check && npm run lint && npm run typecheck && npm run test
+
+
+> weighingms-frontend@0.1.0 format:check
+> prettier --check .
+
+Checking formatting...
+All matched files use Prettier code style!
+
+> weighingms-frontend@0.1.0 lint
+> eslint .
+
+
+> weighingms-frontend@0.1.0 typecheck
+> tsc --noEmit
+
+
+> weighingms-frontend@0.1.0 test
+> vitest run
+
+
+ RUN  v5.0.5 /home/bs00956/Desktop/weighingms/frontend
+
+
+ Test Files  14 passed (14)
+      Tests  50 passed (50)
+   Start at  15:52:40
+   Duration  3.78s (environment 69%, tests 15%, setup 11%, import 2%, transform 2%)
+

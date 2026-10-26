@@ -1,0 +1,23 @@
+$ ls -la docs
+total 88
+drwxrwxr-x 2 bs00956 bs00956  4096 Oct 26 11:44 .
+drwxrwxr-x 6 bs00956 bs00956  4096 Oct 26 11:44 ..
+-rw-rw-r-- 1 bs00956 bs00956 35313 Oct 26 11:44 brief.md
+-rw-rw-r-- 1 bs00956 bs00956 44841 Oct 26 11:44 customize-weighing-station.html
+
+$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	Images/
+	Project Requirement.pdf
+	Workbook for claude.md
+	brief.md
+	customize-weighing-station.html
+	docs/
+	evidence/
+
+nothing added to commit but untracked files present (use "git add" to track)

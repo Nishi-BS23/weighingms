@@ -1,0 +1,15 @@
+# Workbook Step 19 — Screen 1 data comes from the WeighingMS API (browser network log)
+# 2026-10-26T07:09:27.836Z
+
+GET /api/batches -> 200
+--- operator touches row B-24187 ---
+GET /api/batches/B-24187 -> 200
+GET /api/batches/B-24187/recipe -> 200
+--- back to queue; trainer simulates a scan of B-24191 ---
+GET /api/batches -> 200
+GET /api/batches/B-24191 -> 200
+GET /api/batches/B-24191/recipe -> 200
+--- scan selected B-24191 (Recipe · Rose 08 shown) ---
+
+# Batch IDs hard-coded in UI source (frontend/src):
+(none — the training panel default scan text was removed after this check; batch IDs come only from the API)

@@ -1,0 +1,20 @@
+# Workbook Step 22 — automated tolerance tests
+# Yellow RGB: target 94.0 g, tolerance ±0.5 g → acceptable range 93.5 – 94.5 g (inclusive)
+# 2026-10-26T08:49:41Z  command: .venv/bin/pytest -vv -k 'step_22 or tolerance_boundaries or inclusive_band' tests/
+
+tests/api/weighingms/test_sessions_api.py::test_live_evaluation_tolerance_boundaries PASSED
+tests/unit/weighingms/test_tolerance_band.py::test_recipe_tolerance_defines_an_inclusive_band PASSED
+tests/unit/weighingms/test_tolerance_evaluation.py::test_workbook_step_22_yellow_rgb_boundaries[93.4-NEAR-False] PASSED
+tests/unit/weighingms/test_tolerance_evaluation.py::test_workbook_step_22_yellow_rgb_boundaries[93.5-WITHIN-True] PASSED
+tests/unit/weighingms/test_tolerance_evaluation.py::test_workbook_step_22_yellow_rgb_boundaries[94.0-WITHIN-True] PASSED
+tests/unit/weighingms/test_tolerance_evaluation.py::test_workbook_step_22_yellow_rgb_boundaries[94.5-WITHIN-True] PASSED
+tests/unit/weighingms/test_tolerance_evaluation.py::test_workbook_step_22_yellow_rgb_boundaries[94.6-OVER-False] PASSED
+====================== 7 passed, 167 deselected in 0.35s =======================
+
+| Weight | Expected (workbook) | Result |
+|--------|---------------------|--------|
+| 93.4 g | cannot confirm | cannot confirm (NEAR) ✅ |
+| 93.5 g | can confirm | can confirm (WITHIN) ✅ |
+| 94.0 g | can confirm | can confirm (WITHIN) ✅ |
+| 94.5 g | can confirm | can confirm (WITHIN) ✅ |
+| 94.6 g | cannot confirm | cannot confirm (OVER) ✅ |

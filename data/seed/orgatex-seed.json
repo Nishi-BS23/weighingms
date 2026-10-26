@@ -1,0 +1,109 @@
+{
+  "note": "Dummy OrgaTEX seed data for WeighingMS training. Training contract only — not the real OrgaTEX interface. B-24187 reproduces docs/customize-weighing-station.html exactly; B-24188, B-24190 and B-24191 recipes are invented training data (requirements TA-19).",
+  "batches": [
+    {
+      "batchId": "B-24187",
+      "orderRef": "SO-9931",
+      "machineRef": "JET-04",
+      "fabricDesc": "100% CTN knit",
+      "fabricWeightKg": "480",
+      "shadeCode": "Teal 4C",
+      "recipeId": "R-TEAL4C-480",
+      "componentCount": 5,
+      "status": "QUEUED",
+      "releasedAt": "2026-10-26T00:12:00Z",
+      "recipe": {
+        "recipeId": "R-TEAL4C-480",
+        "batchId": "B-24187",
+        "shadeCode": "Teal 4C",
+        "version": "3",
+        "components": [
+          {"componentId": "B-24187-01", "sequence": 1, "dyestuffCode": "DYE-1180", "name": "Remazol Brill. Blue RSPL", "dyestuffType": "DYE", "colourHex": "#1f4fa8", "targetQty": {"value": "1240.0", "unit": "g"}, "tolerance": {"value": "6.0", "unit": "g"}, "lotId": "2026-0341"},
+          {"componentId": "B-24187-02", "sequence": 2, "dyestuffCode": "DYE-2204", "name": "Remazol Red RB", "dyestuffType": "DYE", "colourHex": "#b8253a", "targetQty": {"value": "386.0", "unit": "g"}, "tolerance": {"value": "2.0", "unit": "g"}, "lotId": "2026-0298"},
+          {"componentId": "B-24187-03", "sequence": 3, "dyestuffCode": "DYE-4471", "name": "Remazol Yellow RGB", "dyestuffType": "DYE", "colourHex": "#d9a520", "targetQty": {"value": "94.0", "unit": "g"}, "tolerance": {"value": "0.5", "unit": "g"}, "lotId": "2026-0387"},
+          {"componentId": "B-24187-04", "sequence": 4, "dyestuffCode": "AUX-0101", "name": "Sodium Sulphate", "dyestuffType": "SALT", "colourHex": "#c9d2dc", "targetQty": {"value": "24.000", "unit": "kg"}, "tolerance": {"value": "0.120", "unit": "kg"}, "lotId": "2026-0112"},
+          {"componentId": "B-24187-05", "sequence": 5, "dyestuffCode": "AUX-0107", "name": "Soda Ash", "dyestuffType": "ALKALI", "colourHex": "#e4eaf0", "targetQty": {"value": "9.600", "unit": "kg"}, "tolerance": {"value": "0.048", "unit": "kg"}, "lotId": "2026-0155"}
+        ]
+      }
+    },
+    {
+      "batchId": "B-24188",
+      "orderRef": "SO-9931",
+      "machineRef": "JET-07",
+      "fabricDesc": "100% CTN knit",
+      "fabricWeightKg": "520",
+      "shadeCode": "Teal 4C",
+      "recipeId": "R-TEAL4C-520",
+      "componentCount": 5,
+      "status": "QUEUED",
+      "releasedAt": "2026-10-26T00:14:00Z",
+      "recipe": {
+        "recipeId": "R-TEAL4C-520",
+        "batchId": "B-24188",
+        "shadeCode": "Teal 4C",
+        "version": "3",
+        "trainingDataNote": "invented training data: B-24187 recipe scaled by fabric weight 520/480, tolerance 0.5% of target",
+        "components": [
+          {"componentId": "B-24188-01", "sequence": 1, "dyestuffCode": "DYE-1180", "name": "Remazol Brill. Blue RSPL", "dyestuffType": "DYE", "colourHex": "#1f4fa8", "targetQty": {"value": "1343.3", "unit": "g"}, "tolerance": {"value": "6.7", "unit": "g"}, "lotId": "2026-0341"},
+          {"componentId": "B-24188-02", "sequence": 2, "dyestuffCode": "DYE-2204", "name": "Remazol Red RB", "dyestuffType": "DYE", "colourHex": "#b8253a", "targetQty": {"value": "418.2", "unit": "g"}, "tolerance": {"value": "2.1", "unit": "g"}, "lotId": "2026-0298"},
+          {"componentId": "B-24188-03", "sequence": 3, "dyestuffCode": "DYE-4471", "name": "Remazol Yellow RGB", "dyestuffType": "DYE", "colourHex": "#d9a520", "targetQty": {"value": "101.8", "unit": "g"}, "tolerance": {"value": "0.5", "unit": "g"}, "lotId": "2026-0387"},
+          {"componentId": "B-24188-04", "sequence": 4, "dyestuffCode": "AUX-0101", "name": "Sodium Sulphate", "dyestuffType": "SALT", "colourHex": "#c9d2dc", "targetQty": {"value": "26.000", "unit": "kg"}, "tolerance": {"value": "0.130", "unit": "kg"}, "lotId": "2026-0112"},
+          {"componentId": "B-24188-05", "sequence": 5, "dyestuffCode": "AUX-0107", "name": "Soda Ash", "dyestuffType": "ALKALI", "colourHex": "#e4eaf0", "targetQty": {"value": "10.400", "unit": "kg"}, "tolerance": {"value": "0.052", "unit": "kg"}, "lotId": "2026-0155"}
+        ]
+      }
+    },
+    {
+      "batchId": "B-24190",
+      "orderRef": "SO-9944",
+      "machineRef": "JET-02",
+      "fabricDesc": "CVC fleece",
+      "fabricWeightKg": "310",
+      "shadeCode": "Navy 12",
+      "recipeId": "R-NAVY12-310",
+      "componentCount": 7,
+      "status": "QUEUED",
+      "releasedAt": "2026-10-26T00:20:00Z",
+      "recipe": {
+        "recipeId": "R-NAVY12-310",
+        "batchId": "B-24190",
+        "shadeCode": "Navy 12",
+        "version": "1",
+        "trainingDataNote": "invented training data; Soda Ash deliberately has no tolerance so the WeighingMS default rule applies (TA-03)",
+        "components": [
+          {"componentId": "B-24190-01", "sequence": 1, "dyestuffCode": "DYE-3307", "name": "Remazol Navy RGB", "dyestuffType": "DYE", "colourHex": "#1b2a4a", "targetQty": {"value": "2480.0", "unit": "g"}, "tolerance": {"value": "12.4", "unit": "g"}, "lotId": "2026-0402"},
+          {"componentId": "B-24190-02", "sequence": 2, "dyestuffCode": "DYE-3310", "name": "Remazol Black B 133%", "dyestuffType": "DYE", "colourHex": "#1a1a1a", "targetQty": {"value": "620.0", "unit": "g"}, "tolerance": {"value": "3.1", "unit": "g"}, "lotId": "2026-0377"},
+          {"componentId": "B-24190-03", "sequence": 3, "dyestuffCode": "DYE-2204", "name": "Remazol Red RB", "dyestuffType": "DYE", "colourHex": "#b8253a", "targetQty": {"value": "155.0", "unit": "g"}, "tolerance": {"value": "0.8", "unit": "g"}, "lotId": "2026-0298"},
+          {"componentId": "B-24190-04", "sequence": 4, "dyestuffCode": "DYE-4471", "name": "Remazol Yellow RGB", "dyestuffType": "DYE", "colourHex": "#d9a520", "targetQty": {"value": "46.5", "unit": "g"}, "tolerance": {"value": "0.2", "unit": "g"}, "lotId": "2026-0387"},
+          {"componentId": "B-24190-05", "sequence": 5, "dyestuffCode": "AUX-0210", "name": "Anti-crease Agent AC", "dyestuffType": "AUXILIARY", "colourHex": "#d8d2c4", "targetQty": {"value": "0.930", "unit": "kg"}, "tolerance": {"value": "0.005", "unit": "kg"}, "lotId": "2026-0219"},
+          {"componentId": "B-24190-06", "sequence": 6, "dyestuffCode": "AUX-0101", "name": "Sodium Sulphate", "dyestuffType": "SALT", "colourHex": "#c9d2dc", "targetQty": {"value": "21.700", "unit": "kg"}, "tolerance": {"value": "0.109", "unit": "kg"}, "lotId": "2026-0112"},
+          {"componentId": "B-24190-07", "sequence": 7, "dyestuffCode": "AUX-0107", "name": "Soda Ash", "dyestuffType": "ALKALI", "colourHex": "#e4eaf0", "targetQty": {"value": "6.200", "unit": "kg"}, "lotId": "2026-0155"}
+        ]
+      }
+    },
+    {
+      "batchId": "B-24191",
+      "orderRef": "SO-9947",
+      "machineRef": "WINCH-01",
+      "fabricDesc": "Viscose jersey",
+      "fabricWeightKg": "190",
+      "shadeCode": "Rose 08",
+      "recipeId": "R-ROSE08-190",
+      "componentCount": 4,
+      "status": "QUEUED",
+      "releasedAt": "2026-10-26T00:25:00Z",
+      "recipe": {
+        "recipeId": "R-ROSE08-190",
+        "batchId": "B-24191",
+        "shadeCode": "Rose 08",
+        "version": "2",
+        "trainingDataNote": "invented training data",
+        "components": [
+          {"componentId": "B-24191-01", "sequence": 1, "dyestuffCode": "DYE-2290", "name": "Remazol Brill. Red F3B", "dyestuffType": "DYE", "colourHex": "#d6336c", "targetQty": {"value": "285.0", "unit": "g"}, "tolerance": {"value": "1.4", "unit": "g"}, "lotId": "2026-0311"},
+          {"componentId": "B-24191-02", "sequence": 2, "dyestuffCode": "DYE-1180", "name": "Remazol Brill. Blue RSPL", "dyestuffType": "DYE", "colourHex": "#1f4fa8", "targetQty": {"value": "9.5", "unit": "g"}, "tolerance": {"value": "0.2", "unit": "g"}, "lotId": "2026-0341"},
+          {"componentId": "B-24191-03", "sequence": 3, "dyestuffCode": "AUX-0101", "name": "Sodium Sulphate", "dyestuffType": "SALT", "colourHex": "#c9d2dc", "targetQty": {"value": "9.500", "unit": "kg"}, "tolerance": {"value": "0.048", "unit": "kg"}, "lotId": "2026-0112"},
+          {"componentId": "B-24191-04", "sequence": 4, "dyestuffCode": "AUX-0107", "name": "Soda Ash", "dyestuffType": "ALKALI", "colourHex": "#e4eaf0", "targetQty": {"value": "3.800", "unit": "kg"}, "tolerance": {"value": "0.019", "unit": "kg"}, "lotId": "2026-0155"}
+        ]
+      }
+    }
+  ]
+}

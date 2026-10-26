@@ -1,0 +1,116 @@
+{
+  "note": "Workbook Step 26 \u2014 OrgaTEX write-back. WeighingMS posted POST /api/batches/B-24187/consumption to the Dummy OrgaTEX on completion (5/5). 'storedInDummyOrgatex' is GET /api/batches/B-24187/consumption on the dummy; 'uiSummaryWriteBack' is what Screen 3 shows.",
+  "session": {
+    "sessionId": "WS-FBA3382E0C",
+    "status": "COMPLETED",
+    "syncStatus": "SYNCED",
+    "syncedAt": "2026-10-26T08:58:43.559560Z"
+  },
+  "uiSummaryWriteBack": {
+    "status": "SYNCED",
+    "at": "2026-10-26T08:58:43.559560Z",
+    "consumptionId": "CNS-F0DB51D1F261"
+  },
+  "batchStatusInDummyOrgatex": "WEIGHED",
+  "storedInDummyOrgatex": [
+    {
+      "consumptionId": "CNS-F0DB51D1F261",
+      "batchId": "B-24187",
+      "receivedAt": "2026-10-26T08:58:43Z",
+      "posting": {
+        "idempotencyKey": "WS-FBA3382E0C",
+        "sessionId": "WS-FBA3382E0C",
+        "stationId": "STN-01",
+        "operatorId": "OP-1001",
+        "completedAt": "2026-10-26T08:58:43.546984Z",
+        "lines": [
+          {
+            "componentId": "B-24187-01",
+            "dyestuffCode": "DYE-1180",
+            "lotId": "2026-0341",
+            "target": {
+              "value": "1240.0",
+              "unit": "g"
+            },
+            "actual": {
+              "value": "1241.5",
+              "unit": "g"
+            },
+            "scaleId": "scale-3kg",
+            "operatorId": "OP-1001",
+            "confirmedAt": "2026-10-26T08:58:43.458503Z",
+            "result": "IN_TOLERANCE"
+          },
+          {
+            "componentId": "B-24187-02",
+            "dyestuffCode": "DYE-2204",
+            "lotId": "2026-0298",
+            "target": {
+              "value": "386.0",
+              "unit": "g"
+            },
+            "actual": {
+              "value": "385.4",
+              "unit": "g"
+            },
+            "scaleId": "scale-3kg",
+            "operatorId": "OP-1001",
+            "confirmedAt": "2026-10-26T08:58:43.483864Z",
+            "result": "IN_TOLERANCE"
+          },
+          {
+            "componentId": "B-24187-03",
+            "dyestuffCode": "DYE-4471",
+            "lotId": "2026-0387",
+            "target": {
+              "value": "94.0",
+              "unit": "g"
+            },
+            "actual": {
+              "value": "94.2",
+              "unit": "g"
+            },
+            "scaleId": "scale-3kg",
+            "operatorId": "OP-1001",
+            "confirmedAt": "2026-10-26T08:58:43.505943Z",
+            "result": "IN_TOLERANCE"
+          },
+          {
+            "componentId": "B-24187-04",
+            "dyestuffCode": "AUX-0101",
+            "lotId": "2026-0112",
+            "target": {
+              "value": "24.000",
+              "unit": "kg"
+            },
+            "actual": {
+              "value": "23.980",
+              "unit": "kg"
+            },
+            "scaleId": "scale-32kg",
+            "operatorId": "OP-1001",
+            "confirmedAt": "2026-10-26T08:58:43.526389Z",
+            "result": "IN_TOLERANCE"
+          },
+          {
+            "componentId": "B-24187-05",
+            "dyestuffCode": "AUX-0107",
+            "lotId": "2026-0155",
+            "target": {
+              "value": "9.600",
+              "unit": "kg"
+            },
+            "actual": {
+              "value": "9.621",
+              "unit": "kg"
+            },
+            "scaleId": "scale-32kg",
+            "operatorId": "OP-1001",
+            "confirmedAt": "2026-10-26T08:58:43.546947Z",
+            "result": "IN_TOLERANCE"
+          }
+        ]
+      }
+    }
+  ]
+}

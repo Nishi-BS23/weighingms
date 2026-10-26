@@ -1,0 +1,16 @@
+# Workbook Step 24 — overshoot tests (training rule: block and recover, ADR-004)
+# 2026-10-26T08:58:40Z
+
+tests/api/weighingms/test_completion_api.py::test_overshoot_blocks_then_recovery_by_removing_excess PASSED
+tests/api/weighingms/test_completion_api.py::test_supervisor_override PASSED
+tests/api/weighingms/test_completion_api.py::test_override_not_needed_within_tolerance PASSED
+tests/api/weighingms/test_sessions_api.py::test_overshoot_surplus_in_live_response PASSED
+tests/unit/weighingms/test_session_completion.py::test_override_records_an_overridden_weighing_with_surplus PASSED
+tests/unit/weighingms/test_session_completion.py::test_override_of_an_underweight_has_no_surplus PASSED
+tests/unit/weighingms/test_session_completion.py::test_override_not_needed_within_tolerance_or_on_an_empty_scale[94.0] PASSED
+tests/unit/weighingms/test_session_completion.py::test_override_not_needed_within_tolerance_or_on_an_empty_scale[0.0] PASSED
+tests/unit/weighingms/test_session_completion.py::test_overshoot_guidance_follows_the_step_24_decision PASSED
+tests/unit/weighingms/test_session_completion.py::test_removing_the_excess_makes_confirmation_possible_again PASSED
+tests/unit/weighingms/test_tolerance_evaluation.py::test_overshoot_surplus_matches_the_prototype PASSED
+tests/unit/weighingms/test_tolerance_evaluation.py::test_empty_scale_offers_no_override PASSED
+====================== 12 passed, 193 deselected in 1.02s ======================

@@ -1,0 +1,25 @@
+$ npm run test:e2e
+
+> weighingms@0.1.0 test:e2e
+> npm --prefix playwright test
+
+
+> weighingms-e2e@0.1.0 test
+> playwright test
+
+
+Running 11 tests using 1 worker
+
+  ✓   1 [chromium] › tests/failures.spec.ts:18:1 › Scale unavailable — safe failure (2.0s)
+  ✓   2 [chromium] › tests/failures.spec.ts:37:1 › OrgaTEX unavailable — queue message with Retry; weighing in progress continues (2.3s)
+  ✓   3 [chromium] › tests/failures.spec.ts:61:1 › OrgaTEX unavailable at completion — PENDING, Retry posts exactly once (2.1s)
+  ✓   4 [chromium] › tests/failures.spec.ts:96:1 › Printer unavailable — defined message, batch stays completed, print later (1.4s)
+  ✓   5 [chromium] › tests/failures.spec.ts:126:1 › Invalid weight — shown but refused by the server even if the UI is bypassed (779ms)
+  ✓   6 [chromium] › tests/failures.spec.ts:159:1 › Over tolerance and under tolerance — cannot confirm, nothing recorded (870ms)
+  ✓   7 [chromium] › tests/failures.spec.ts:179:1 › Re-tare — weight reset to zero (981ms)
+  ✓   8 [chromium] › tests/failures.spec.ts:189:1 › Quit — safe exit: nothing recorded, batch resumes where it was (1.2s)
+  ✓   9 [chromium] › tests/failures.spec.ts:212:1 › Incomplete batch — cannot complete (654ms)
+  ✓  10 [chromium] › tests/workflow.spec.ts:55:1 › B-24187: select, load recipe, weigh five components, write back, print ticket (13.4s)
+  ✓  11 [chromium] › tests/workflow.spec.ts:169:1 › Yellow RGB tolerance boundaries and the switch to the 32 kg floor scale (1.5s)
+
+  11 passed (28.0s)

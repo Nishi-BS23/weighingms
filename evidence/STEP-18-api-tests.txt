@@ -1,0 +1,179 @@
+# STEP-18 Dummy OrgaTEX API tests (curl, port 8100)  — 2026-10-26T06:41:54Z
+
+$ curl -s -w '\nHTTP %{http_code}\n' http://localhost:8100/api/batches
+{
+  "generatedAt": "2026-10-26T06:41:54Z",
+  "batches": [
+    {
+      "batchId": "B-24187",
+      "orderRef": "SO-9931",
+      "machineRef": "JET-04",
+      "fabricDesc": "100% CTN knit",
+      "fabricWeightKg": "480",
+      "shadeCode": "Teal 4C",
+      "recipeId": "R-TEAL4C-480",
+      "componentCount": 5,
+      "status": "QUEUED",
+      "releasedAt": "2026-10-26T00:12:00Z"
+    },
+    {
+      "batchId": "B-24188",
+      "orderRef": "SO-9931",
+      "machineRef": "JET-07",
+      "fabricDesc": "100% CTN knit",
+      "fabricWeightKg": "520",
+      "shadeCode": "Teal 4C",
+      "recipeId": "R-TEAL4C-520",
+      "componentCount": 5,
+      "status": "QUEUED",
+      "releasedAt": "2026-10-26T00:14:00Z"
+    },
+    {
+      "batchId": "B-24190",
+      "orderRef": "SO-9944",
+      "machineRef": "JET-02",
+      "fabricDesc": "CVC fleece",
+      "fabricWeightKg": "310",
+      "shadeCode": "Navy 12",
+      "recipeId": "R-NAVY12-310",
+      "componentCount": 7,
+      "status": "QUEUED",
+      "releasedAt": "2026-10-26T00:20:00Z"
+    },
+    {
+      "batchId": "B-24191",
+      "orderRef": "SO-9947",
+      "machineRef": "WINCH-01",
+      "fabricDesc": "Viscose jersey",
+      "fabricWeightKg": "190",
+      "shadeCode": "Rose 08",
+      "recipeId": "R-ROSE08-190",
+      "componentCount": 4,
+      "status": "QUEUED",
+      "releasedAt": "2026-10-26T00:25:00Z"
+    }
+  ]
+}
+HTTP 200
+
+$ curl -s -w '\nHTTP %{http_code}\n' http://localhost:8100/api/batches/B-24187
+{
+  "batchId": "B-24187",
+  "orderRef": "SO-9931",
+  "machineRef": "JET-04",
+  "fabricDesc": "100% CTN knit",
+  "fabricWeightKg": "480",
+  "shadeCode": "Teal 4C",
+  "recipeId": "R-TEAL4C-480",
+  "componentCount": 5,
+  "status": "QUEUED",
+  "releasedAt": "2026-10-26T00:12:00Z"
+}
+HTTP 200
+
+$ curl -s -w '\nHTTP %{http_code}\n' http://localhost:8100/api/batches/B-24187/recipe
+{
+  "recipeId": "R-TEAL4C-480",
+  "batchId": "B-24187",
+  "shadeCode": "Teal 4C",
+  "version": "3",
+  "trainingDataNote": null,
+  "components": [
+    {
+      "componentId": "B-24187-01",
+      "sequence": 1,
+      "dyestuffCode": "DYE-1180",
+      "name": "Remazol Brill. Blue RSPL",
+      "dyestuffType": "DYE",
+      "colourHex": "#1f4fa8",
+      "targetQty": {
+        "value": "1240.0",
+        "unit": "g"
+      },
+      "tolerance": {
+        "value": "6.0",
+        "unit": "g"
+      },
+      "lotId": "2026-0341"
+    },
+    {
+      "componentId": "B-24187-02",
+      "sequence": 2,
+      "dyestuffCode": "DYE-2204",
+      "name": "Remazol Red RB",
+      "dyestuffType": "DYE",
+      "colourHex": "#b8253a",
+      "targetQty": {
+        "value": "386.0",
+        "unit": "g"
+      },
+      "tolerance": {
+        "value": "2.0",
+        "unit": "g"
+      },
+      "lotId": "2026-0298"
+    },
+    {
+      "componentId": "B-24187-03",
+      "sequence": 3,
+      "dyestuffCode": "DYE-4471",
+      "name": "Remazol Yellow RGB",
+      "dyestuffType": "DYE",
+      "colourHex": "#d9a520",
+      "targetQty": {
+        "value": "94.0",
+        "unit": "g"
+      },
+      "tolerance": {
+        "value": "0.5",
+        "unit": "g"
+      },
+      "lotId": "2026-0387"
+    },
+    {
+      "componentId": "B-24187-04",
+      "sequence": 4,
+      "dyestuffCode": "AUX-0101",
+      "name": "Sodium Sulphate",
+      "dyestuffType": "SALT",
+      "colourHex": "#c9d2dc",
+      "targetQty": {
+        "value": "24.000",
+        "unit": "kg"
+      },
+      "tolerance": {
+        "value": "0.120",
+        "unit": "kg"
+      },
+      "lotId": "2026-0112"
+    },
+    {
+      "componentId": "B-24187-05",
+      "sequence": 5,
+      "dyestuffCode": "AUX-0107",
+      "name": "Soda Ash",
+      "dyestuffType": "ALKALI",
+      "colourHex": "#e4eaf0",
+      "targetQty": {
+        "value": "9.600",
+        "unit": "kg"
+      },
+      "tolerance": {
+        "value": "0.048",
+        "unit": "kg"
+      },
+      "lotId": "2026-0155"
+    }
+  ]
+}
+HTTP 200
+
+$ curl -s -w '\nHTTP %{http_code}\n' http://localhost:8100/api/batches/B-00000
+{
+  "error": {
+    "code": "BATCH_NOT_FOUND",
+    "message": "Batch B-00000 does not exist.",
+    "details": {}
+  }
+}
+HTTP 404

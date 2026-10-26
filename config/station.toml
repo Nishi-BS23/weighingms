@@ -1,0 +1,139 @@
+# WeighingMS station configuration.
+# Business rules that FCI may change (scale threshold, tolerance default, labels) live here so
+# they can be changed without code changes (requirements NFR-13, PDF §5.3, §6).
+# Decimal values are strings so they are read exactly.
+
+[station]
+id = "STN-01"
+name = "STATION 01"
+language = "EN"
+timezone = "Asia/Dhaka"
+default_operator = "OP-1001"
+# Training build: mounts /api/training/* (simulation, failure injection, reset). Must be false on a
+# real station (ADR-003).
+training_mode = true
+
+[batches]
+# The prototype's QUEUED means "released to this station, awaiting weighing" (TA-02).
+selectable_statuses = ["QUEUED", "WEIGHING"]
+
+[scale_selection]
+# Target quantity <= threshold → precision scale, otherwise floor (heavy-duty) scale (PDF §5.3).
+threshold = { value = "3", unit = "kg" }
+precision_scale = "scale-3kg"
+floor_scale = "scale-32kg"
+
+[[scales]]
+id = "scale-3kg"
+class = "PRECISION"
+label = "3 kg precision"
+strip_label = "SCALE 3 kg"
+
+[[scales]]
+id = "scale-32kg"
+class = "FLOOR"
+label = "32 kg floor"
+strip_label = "SCALE 32 kg"
+
+[tolerance_default]
+# Used only when a recipe component carries no tolerance (TA-03): ±percent of target,
+# but never tighter than the minimum for the selected scale class.
+percent = "0.5"
+min_precision = { value = "0.2", unit = "g" }
+min_floor = { value = "0.010", unit = "kg" }
+
+[ticket]
+# Ticket content is defined by FCI (TA-15, Q18); the prototype's layout is used until then.
+header = "FCI DYEING — WEIGHING TICKET"
+
+[short_names]
+# Names used on the weighing ticket (prototype ticket).
+"Remazol Brill. Blue RSPL" = "Blue RSPL"
+"Remazol Red RB" = "Red RB"
+"Remazol Yellow RGB" = "Yellow RGB"
+"Sodium Sulphate" = "Na2SO4"
+"Soda Ash" = "Soda Ash"
+"Remazol Navy RGB" = "Navy RGB"
+"Remazol Black B 133%" = "Black B"
+"Anti-crease Agent AC" = "Anti-crease"
+"Remazol Brill. Red F3B" = "Red F3B"
+
+# ── Containers (WeighingMS master data, TA-08): one container per component ────────────────────
+# A dyestuff without an assigned container uses the default for its scale class.
+
+[container_defaults]
+PRECISION = "C-01"
+FLOOR = "D-01"
+
+[[containers]]
+id = "C-01"
+type = "BUCKET"
+tare = { value = "214", unit = "g" }
+dyestuffs = []
+
+[[containers]]
+id = "C-09"
+type = "BUCKET"
+tare = { value = "214", unit = "g" }
+dyestuffs = ["DYE-1180"]
+
+[[containers]]
+id = "C-11"
+type = "BUCKET"
+tare = { value = "214", unit = "g" }
+dyestuffs = ["DYE-2204"]
+
+[[containers]]
+id = "C-12"
+type = "BUCKET"
+tare = { value = "214", unit = "g" }
+dyestuffs = ["DYE-4471"]
+
+[[containers]]
+id = "C-14"
+type = "BUCKET"
+tare = { value = "214", unit = "g" }
+dyestuffs = ["DYE-3307", "DYE-3310", "DYE-2290", "AUX-0210"]
+
+[[containers]]
+id = "D-01"
+type = "DRUM"
+tare = { value = "1.850", unit = "kg" }
+dyestuffs = []
+
+[[containers]]
+id = "D-03"
+type = "DRUM"
+tare = { value = "1.850", unit = "kg" }
+dyestuffs = ["AUX-0101"]
+
+[[containers]]
+id = "D-05"
+type = "DRUM"
+tare = { value = "1.850", unit = "kg" }
+dyestuffs = ["AUX-0107"]
+
+# ── Operators (training, TA-09): identified by badge; supervisors authorise overrides with a PIN ──
+# PINs are stored only as salted PBKDF2-SHA256 hashes. Training supervisor PIN: see README.
+
+[[operators]]
+id = "OP-1001"
+name = "R. Karim"
+shift = "Shift A"
+badge = "1001"
+role = "OPERATOR"
+
+[[operators]]
+id = "OP-1002"
+name = "M. Hossain"
+shift = "Shift B"
+badge = "1002"
+role = "OPERATOR"
+
+[[operators]]
+id = "SV-2001"
+name = "S. Ahmed"
+shift = "Shift A"
+badge = "2001"
+role = "SUPERVISOR"
+pin_hash = "pbkdf2_sha256$100000$527f5ef92ab66c97$bb4850d70730e07d5a095f7febe7faf7817d1d987a796ce8a2a93023fa64ed34"

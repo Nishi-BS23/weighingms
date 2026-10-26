@@ -1,0 +1,215 @@
+{
+  "note": "Workbook Step 25 \u2014 confirmed weighing record for Remazol Yellow RGB, as returned by GET /api/weighing-records?batchId=B-24187. Workbook fields: actualWeight=actual, operator=operatorId, component=componentId/dyestuffCode, lot=lotId, container=containerId, tare=tare, scale=scaleId, timestamp=confirmedAt.",
+  "record": {
+    "recordId": "WR-DB418DBDB7",
+    "sessionId": "WS-FBA3382E0C",
+    "batchId": "B-24187",
+    "componentId": "B-24187-03",
+    "dyestuffCode": "DYE-4471",
+    "dyestuffName": "Remazol Yellow RGB",
+    "target": {
+      "value": "94.0",
+      "unit": "g"
+    },
+    "actual": {
+      "value": "94.2",
+      "unit": "g"
+    },
+    "toleranceMin": {
+      "value": "93.5",
+      "unit": "g"
+    },
+    "toleranceMax": {
+      "value": "94.5",
+      "unit": "g"
+    },
+    "result": "IN_TOLERANCE",
+    "surplus": null,
+    "operatorId": "OP-1001",
+    "lotId": "2026-0387",
+    "containerId": "C-12",
+    "tare": {
+      "value": "214.0",
+      "unit": "g"
+    },
+    "scaleId": "scale-3kg",
+    "confirmedAt": "2026-10-26T08:58:43.505943Z"
+  },
+  "allRecordsForBatch": [
+    {
+      "recordId": "WR-9AA76F5FCE",
+      "sessionId": "WS-FBA3382E0C",
+      "batchId": "B-24187",
+      "componentId": "B-24187-01",
+      "dyestuffCode": "DYE-1180",
+      "dyestuffName": "Remazol Brill. Blue RSPL",
+      "target": {
+        "value": "1240.0",
+        "unit": "g"
+      },
+      "actual": {
+        "value": "1241.5",
+        "unit": "g"
+      },
+      "toleranceMin": {
+        "value": "1234.0",
+        "unit": "g"
+      },
+      "toleranceMax": {
+        "value": "1246.0",
+        "unit": "g"
+      },
+      "result": "IN_TOLERANCE",
+      "surplus": null,
+      "operatorId": "OP-1001",
+      "lotId": "2026-0341",
+      "containerId": "C-09",
+      "tare": {
+        "value": "214.0",
+        "unit": "g"
+      },
+      "scaleId": "scale-3kg",
+      "confirmedAt": "2026-10-26T08:58:43.458503Z"
+    },
+    {
+      "recordId": "WR-AAB92B0126",
+      "sessionId": "WS-FBA3382E0C",
+      "batchId": "B-24187",
+      "componentId": "B-24187-02",
+      "dyestuffCode": "DYE-2204",
+      "dyestuffName": "Remazol Red RB",
+      "target": {
+        "value": "386.0",
+        "unit": "g"
+      },
+      "actual": {
+        "value": "385.4",
+        "unit": "g"
+      },
+      "toleranceMin": {
+        "value": "384.0",
+        "unit": "g"
+      },
+      "toleranceMax": {
+        "value": "388.0",
+        "unit": "g"
+      },
+      "result": "IN_TOLERANCE",
+      "surplus": null,
+      "operatorId": "OP-1001",
+      "lotId": "2026-0298",
+      "containerId": "C-11",
+      "tare": {
+        "value": "214.0",
+        "unit": "g"
+      },
+      "scaleId": "scale-3kg",
+      "confirmedAt": "2026-10-26T08:58:43.483864Z"
+    },
+    {
+      "recordId": "WR-DB418DBDB7",
+      "sessionId": "WS-FBA3382E0C",
+      "batchId": "B-24187",
+      "componentId": "B-24187-03",
+      "dyestuffCode": "DYE-4471",
+      "dyestuffName": "Remazol Yellow RGB",
+      "target": {
+        "value": "94.0",
+        "unit": "g"
+      },
+      "actual": {
+        "value": "94.2",
+        "unit": "g"
+      },
+      "toleranceMin": {
+        "value": "93.5",
+        "unit": "g"
+      },
+      "toleranceMax": {
+        "value": "94.5",
+        "unit": "g"
+      },
+      "result": "IN_TOLERANCE",
+      "surplus": null,
+      "operatorId": "OP-1001",
+      "lotId": "2026-0387",
+      "containerId": "C-12",
+      "tare": {
+        "value": "214.0",
+        "unit": "g"
+      },
+      "scaleId": "scale-3kg",
+      "confirmedAt": "2026-10-26T08:58:43.505943Z"
+    },
+    {
+      "recordId": "WR-D650E66D0D",
+      "sessionId": "WS-FBA3382E0C",
+      "batchId": "B-24187",
+      "componentId": "B-24187-04",
+      "dyestuffCode": "AUX-0101",
+      "dyestuffName": "Sodium Sulphate",
+      "target": {
+        "value": "24.000",
+        "unit": "kg"
+      },
+      "actual": {
+        "value": "23.980",
+        "unit": "kg"
+      },
+      "toleranceMin": {
+        "value": "23.880",
+        "unit": "kg"
+      },
+      "toleranceMax": {
+        "value": "24.120",
+        "unit": "kg"
+      },
+      "result": "IN_TOLERANCE",
+      "surplus": null,
+      "operatorId": "OP-1001",
+      "lotId": "2026-0112",
+      "containerId": "D-03",
+      "tare": {
+        "value": "1.850",
+        "unit": "kg"
+      },
+      "scaleId": "scale-32kg",
+      "confirmedAt": "2026-10-26T08:58:43.526389Z"
+    },
+    {
+      "recordId": "WR-C45E365ED9",
+      "sessionId": "WS-FBA3382E0C",
+      "batchId": "B-24187",
+      "componentId": "B-24187-05",
+      "dyestuffCode": "AUX-0107",
+      "dyestuffName": "Soda Ash",
+      "target": {
+        "value": "9.600",
+        "unit": "kg"
+      },
+      "actual": {
+        "value": "9.621",
+        "unit": "kg"
+      },
+      "toleranceMin": {
+        "value": "9.552",
+        "unit": "kg"
+      },
+      "toleranceMax": {
+        "value": "9.648",
+        "unit": "kg"
+      },
+      "result": "IN_TOLERANCE",
+      "surplus": null,
+      "operatorId": "OP-1001",
+      "lotId": "2026-0155",
+      "containerId": "D-05",
+      "tare": {
+        "value": "1.850",
+        "unit": "kg"
+      },
+      "scaleId": "scale-32kg",
+      "confirmedAt": "2026-10-26T08:58:43.546947Z"
+    }
+  ]
+}

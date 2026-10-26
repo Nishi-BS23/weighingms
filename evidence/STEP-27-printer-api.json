@@ -1,0 +1,64 @@
+{
+  "note": "Workbook Step 27 — tickets received by the Dummy Printer (POST /api/tickets from WeighingMS); GET /api/tickets on the dummy service. Second print is a REPRINT.",
+  "tickets": [
+    {
+      "batchId": "B-24187",
+      "sessionId": "WS-6F52A232BB",
+      "reprint": false,
+      "lines": [
+        "FCI DYEING — WEIGHING TICKET",
+        "--------------------------------",
+        "BATCH   B-24187",
+        "ORDER   SO-9931",
+        "MACHINE JET-04",
+        "SHADE   Teal 4C",
+        "DATE    2026-10-26 15:07",
+        "OPER.   R. Karim",
+        "--------------------------------",
+        "COMPONENT       TGT    ACT",
+        "Blue RSPL    1240.0 1241.5 g",
+        "Red RB        386.0  385.4 g",
+        "Yellow RGB     94.0   94.2 g",
+        "Na2SO4       24.000 23.980 kg",
+        "Soda Ash      9.600  9.621 kg",
+        "--------------------------------",
+        "ALL WITHIN TOLERANCE",
+        "[BARCODE B-24187]",
+        "B-24187"
+      ],
+      "barcodeValue": "B-24187",
+      "ticketId": "TKT-B4FFC45497",
+      "printedAt": "2026-10-26T09:07:46Z"
+    },
+    {
+      "batchId": "B-24187",
+      "sessionId": "WS-6F52A232BB",
+      "reprint": true,
+      "lines": [
+        "FCI DYEING — WEIGHING TICKET",
+        "*** REPRINT ***",
+        "--------------------------------",
+        "BATCH   B-24187",
+        "ORDER   SO-9931",
+        "MACHINE JET-04",
+        "SHADE   Teal 4C",
+        "DATE    2026-10-26 15:07",
+        "OPER.   R. Karim",
+        "--------------------------------",
+        "COMPONENT       TGT    ACT",
+        "Blue RSPL    1240.0 1241.5 g",
+        "Red RB        386.0  385.4 g",
+        "Yellow RGB     94.0   94.2 g",
+        "Na2SO4       24.000 23.980 kg",
+        "Soda Ash      9.600  9.621 kg",
+        "--------------------------------",
+        "ALL WITHIN TOLERANCE",
+        "[BARCODE B-24187]",
+        "B-24187"
+      ],
+      "barcodeValue": "B-24187",
+      "ticketId": "TKT-7C48D0FDFF",
+      "printedAt": "2026-10-26T09:07:46Z"
+    }
+  ]
+}

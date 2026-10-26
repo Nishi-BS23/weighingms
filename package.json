@@ -1,0 +1,21 @@
+{
+  "name": "weighingms",
+  "version": "0.1.0",
+  "private": true,
+  "description": "WeighingMS — assisted dyestuff weighing station (training build with Dummy APIs)",
+  "scripts": {
+    "setup": "npm install && npm --prefix frontend install && npm --prefix playwright install && npx --prefix playwright playwright install chromium && VIRTUAL_ENV= poetry install",
+    "dev": "concurrently --kill-others-on-fail --names dummy,api,web --prefix-colors yellow,cyan,magenta \"npm:dev:dummy\" \"npm:dev:api\" \"npm:dev:web\"",
+    "dev:dummy": ".venv/bin/python -m uvicorn dummy_systems.app:create_app --factory --host 127.0.0.1 --port 8100 --reload --reload-dir src/dummy_systems",
+    "dev:api": ".venv/bin/python -m uvicorn weighingms.api.app:create_app --factory --host 127.0.0.1 --port 8000 --reload --reload-dir src/weighingms --reload-dir config",
+    "dev:web": "npm --prefix frontend run dev",
+    "gen:api": ".venv/bin/python scripts/dump_openapi.py && npm --prefix frontend run gen:api",
+    "check": "npm run check:py && npm run check:web",
+    "check:py": ".venv/bin/ruff format --check src tests scripts && .venv/bin/ruff check src tests scripts && .venv/bin/mypy && .venv/bin/pytest --cov --cov-report=term-missing",
+    "check:web": "npm --prefix frontend run check",
+    "test:e2e": "npm --prefix playwright test"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}

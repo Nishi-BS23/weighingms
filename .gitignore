@@ -1,0 +1,22 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Node
+node_modules/
+frontend/dist/
+
+# Runtime data (SQLite stores are recreated from seed)
+data/*.db
+data/*.db-wal
+data/*.db-shm
+
+# Playwright output (copied into evidence/ when needed)
+playwright/test-results/
+playwright/playwright-report/

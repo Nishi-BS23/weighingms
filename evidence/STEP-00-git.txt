@@ -1,0 +1,28 @@
+$ pwd
+/home/bs00956/Desktop/weighingms
+
+$ ls -la
+total 240
+drwxrwxr-x  4 bs00956 bs00956   4096 Oct 26 11:38 .
+drwxr-xr-x 10 bs00956 bs00956   4096 Oct 26 11:36 ..
+-rw-rw-r--  1 bs00956 bs00956  35313 Oct 26 11:36 brief.md
+-rw-rw-r--  1 bs00956 bs00956  44841 Oct 26 11:36 customize-weighing-station.html
+drwxrwxr-x  2 bs00956 bs00956   4096 Oct 26 11:38 evidence
+drwxrwxr-x  8 bs00956 bs00956   4096 Oct 26 11:38 .git
+-rw-rw-r--  1 bs00956 bs00956 112601 Oct 26 11:36 Project Requirement.pdf
+-rw-rw-r--  1 bs00956 bs00956  31603 Oct 26 11:36 Workbook for claude.md
+
+$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	Project Requirement.pdf
+	Workbook for claude.md
+	brief.md
+	customize-weighing-station.html
+	evidence/
+
+nothing added to commit but untracked files present (use "git add" to track)
